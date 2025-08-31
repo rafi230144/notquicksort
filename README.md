@@ -1,10 +1,10 @@
 * In `Sort.hs` are implemented four quicksort-esque sorts (named `sort0`, `sort1`, `sort2`, `sort3`).
 
-* From `Main.hs` is built an executable taking a choice of sort (represented as `0`, `1`, `2`, `3`) and a list size (represented as an Int) as command line arguments, performing said sort on an infelicitously chosen List of Ints, and printing the result to standard output.
+* From `Main.hs` is built an executable taking a choice of `sort*` (represented as `0`, `1`, `2`, `3`) and a list size (represented as an Int) as command line arguments, performing said `sort*` on an infelicitously chosen List of Ints, and printing the result to stdout.
 
-* In `Prof.sh` is a shell script taking a list size (represented as an Int) and optimization + specialization level (`O0`, `O2N`, `O2Y`) and dumping profiling information of `Main` compiled with said optimization + specialization level and run with said list size for each sort to `./prof`
+* In `Prof.sh` is a shell script taking a list size (represented as an Int) and optimization + specialization level (`O0`, `O2N`, `O2Y`), compiling `Main.hs` with said optimization + specialization level, running the resulting `Main` on the above-mentioned infelicitious List of said size for each `sort*`, and printing performance stats to stderr as well as dumping profiling data to `./prof`.
 
-* In `Dump.sh` is a shell script taking an optimization + specialization level (`O0`, `O2N`, `O2Y`) and dumping the final GHC core output of `Sort` and `Main` compiled with said optimization + specialization level to `./dump`
+* In `Dump.sh` is a shell script taking an optimization + specialization level (`O0`, `O2N`, `O2Y`) and dumping the final GHC core output of `Sort` and `Main` compiled with said optimization + specialization level to `./dump`.
 
 I.e., everything can be built/run/dumped at once as
 
